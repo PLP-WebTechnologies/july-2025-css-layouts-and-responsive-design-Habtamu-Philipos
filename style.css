@@ -1,0 +1,147 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Three cards per row on desktop */
+    text-align: center;
+}
+
+.card:hover {
+    background-color: #eee;
+}
+
+
+.content-area {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Main content takes up 3 times the width of the sidebar */
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
+    .content-area {
+        grid-template-columns: 1fr; /* Stack the sidebar and main content on top of each other */
+    }
+
+    .card {
+        width: 48%; /* 2 cards per row on tablets */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .content-area {
+        grid-template-columns: 1fr; /* Stack sidebar and main content on top of each other */
+    }
+
+    .card {
+        width: 100%; /* Cards take up the full width */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
